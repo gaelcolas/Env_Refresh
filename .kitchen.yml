@@ -27,7 +27,7 @@ provisioner:
     #modules_path: .
     retry_on_exit_code:
     - 35
-    - 1
+    #- 1
     configuration_data_variable: configData
     modules_from_gallery:
      - xPSDesiredStateConfiguration
@@ -37,7 +37,7 @@ verifier:
   test_folder: Tests/Integration
 
 platforms:
-  - name: win2012r2_RMQ
+  - name: win2012r2_TEST
     os_type: windows
     shell: powershell
     driver:

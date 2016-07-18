@@ -11,7 +11,7 @@ Properties {
 Task CreatePSModuleSymlink  {
     $targetModulePath = Join-path $myPSmodulePath $ModuleFolder
     $ExistingSymLinkInModulePath = $env:PSModulePath -Split ';' |`
-            Get-ChildItem  | Where-Object { $_.Attributes -match 'ReparsePoint'}
+            Get-ChildItem -ErrorAction SilentlyContinue | Where-Object { $_.Attributes -match 'ReparsePoint'}
     if ($ExistingSymLinkInModulePath.FullName -notcontains $targetModulePath)
     {
         New-Item -ItemType SymbolicLink -Path $targetModulePath -Target $here
