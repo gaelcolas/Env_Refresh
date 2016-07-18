@@ -26,5 +26,5 @@ AllNodes = @(
     )
 }
 
-#Default 
-#Start-DscConfiguration -wait -Force Default -Verbose
+Default 
+Start-DscConfiguration -wait -Force Default -Verbose
