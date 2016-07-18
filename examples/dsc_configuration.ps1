@@ -5,8 +5,8 @@
         Env_Refresh TESTVAR 
         {
             Ensure            = 'Present'
-            #RunName           = 'RMQ_BASE_VAR'
-            #VariableNameList  = 'RABBITMQ_BASE'
+            RunName           = 'RMQ_BASE_VAR'
+            VariableNameList  = 'RABBITMQ_BASE'
         }
         Script Test 
         {

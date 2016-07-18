@@ -7,14 +7,14 @@ enum Ensure {
 
 [DscResource()]
 Class Env_Refresh {
-    [DSCProperty(Key)]
+    [DSCProperty(Mandatory)]
     [Ensure] $Ensure
 
-    #[DSCProperty(key)]
-    #[string]$RunName
+    [DSCProperty(key)]
+    [string]$RunName
 
-    #[DSCProperty(Mandatory)]
-    #[string[]]$VariableNameList
+    [DSCProperty(Mandatory)]
+    [string[]]$VariableNameList
 
 
     [void] Set()
